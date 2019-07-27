@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "ESP32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/includes/ble/**",
+                "${IDF_PATH}/components/**"
+            ],
+            "defines": [],
+            "windowsSdkVersion": "10.0.17134.0",
+            "compilerPath": "${IDF_TOOLS_PATH}\\tools\\xtensa-esp32-elf\\esp32-2019r1-8.2.0\\xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcc-8.2.0.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "${default}",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

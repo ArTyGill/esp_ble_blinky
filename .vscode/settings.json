@@ -1,0 +1,33 @@
+{
+    "files.associations": {
+        "freertos.h": "c",
+        "gpio.h": "c",
+        "board.h": "c",
+        "esp_nimble_hci.h": "c",
+        "ble_hci_trans.h": "c",
+        "ble.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Enabled",
+    // "actionButtons": {
+    //     "defaultColor": "#ffffff", // Can also use string color names.
+    //     "loadNpmCommands":true, // Disables automatic generation of actions for npm commands.
+    //     "reloadButton":"♻️", // Custom reload button text or icon (default ↻). null value enables automatic reload on configuration change
+    //     "commands": [
+    //         {
+    //             //"cwd": "/home/custom_folder", 	// Terminal initial folder ${workspaceFolder} and os user home as defaults
+    //             "name": "Build all",
+    //             "color": "white",
+    //             "singleInstance": true,
+    //             "command": "workbench.action.tasks.runTask",
+    //             "args": "Build all"
+    //         },
+    //         {
+    //             "name": "Build app",
+    //             "color": "white",
+    //             "command": "workbench.action.tasks.runTask",
+    //             "args": "Build app"
+    //         }
+    //     ]
+    // }
+    //"terminal.integrated.shell.windows": "C:\\WINDOWS\\system32\\cmd.exe //k C:\\Docs\\espressif\\.espressif\\idf_cmd_init.bat \"C:\\Program Files\\Python37\\\" \"C:\\Program Files\\Git\\cmd\\\""
+}
