@@ -5,7 +5,8 @@
         "board.h": "c",
         "esp_nimble_hci.h": "c",
         "ble_hci_trans.h": "c",
-        "ble.h": "c"
+        "ble.h": "c",
+        "esp_gatts_api.h": "c"
     },
     "C_Cpp.errorSquiggles": "Enabled",
     // "actionButtons": {

@@ -8,11 +8,12 @@
 
 /****************************************************************************
 *
-* This demo showcases creating a GATT database using a predefined attribute table.
-* It acts as a GATT server and can send adv data, be connected by client.
-* Run the gatt_client demo, the client demo will automatically connect to the gatt_server_service_table demo.
-* Client demo will enable GATT server's notify after connection. The two devices will then exchange
-* data.
+* This demo shows how to create a GATT service with an attribute table defined in one place, notifications and gpio config. 
+* Provided API releases the user from adding attributes one by one as implemented in BLUEDROID. 
+* A demo of the other method to create the attribute table is presented in [gatt_server_demo](../gatt_server).
+* 
+* Compatible with the applications for android and ios from Nordic Semiconductor "NRF BLINKY", "NRF CONNECT".
+*
 *
 ****************************************************************************/
 
@@ -30,8 +31,9 @@
 #include "esp_gap_ble_api.h"
 #include "esp_gatts_api.h"
 #include "esp_bt_main.h"
-#include "gatts_table_creat_demo.h"
 #include "esp_gatt_common_api.h"
+
+#include "esp_ble_blinky.h"
 
 #include "driver/gpio.h"
 
@@ -53,14 +55,15 @@
 #define ADV_CONFIG_FLAG             (1 << 0)
 #define SCAN_RSP_CONFIG_FLAG        (1 << 1)
 
-//#define OPPEN_BOARD
 
-#ifdef OPPEN_BOARD
-#define LED_GPIO                    GPIO_NUM_27
-#elif ESP32_DEVKIT 
+#define ESP32_DEVKIT
+
+#ifdef ESP32_DEVKIT
 #define LED_GPIO                    GPIO_NUM_2
+#define BUT_GPIO                    GPIO_NUM_0
 #else 
 #define LED_GPIO                    GPIO_NUM_2
+#define BUT_GPIO                    GPIO_NUM_0
 #endif
 
 static uint8_t adv_config_done       = 0;
